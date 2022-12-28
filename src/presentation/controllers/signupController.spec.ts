@@ -14,6 +14,7 @@ describe("Signup Controller", () => { // Costuma-se colocar o nome do componente
         }
         const httResoponse = sut.handle(httpRequest)
         expect(httResoponse.statusCode).toBe(400)
+        expect(httResoponse.body).toEqual(new Error("Missing param: name"))
 
     })
 
